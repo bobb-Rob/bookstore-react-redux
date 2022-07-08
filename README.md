@@ -1,8 +1,8 @@
-# Bookstore App - REACT.js
+# Bookstore CMS App - REACT.js
 
 ## Welcome! 👋
-
-> #.
+> #### REACT app to manage your books
+> Bookstore CMS to display a list of books, categorize it, add and remove books and update your reading progress
 
                              
 ## Built With ✔️
@@ -12,9 +12,10 @@
 
 ## Functionalites 😄
  
-- Add to Cart
-- Remove from Cart 😋
-- Checkout 😋
+- Display a list of books
+- Categorize it 😋
+- Add and remove books 😋
+- Update your reading progress
 
 ## Getting Started 🙌
 
@@ -38,7 +39,7 @@ Clone the repository and change the directory to portfolio
 ``` 
   `$ git clone https://github.com/bobb-Rob/bookstore-react-redux.git`
 
-  `$ cd react-todo-app`
+  `$ cd bookstore-react-redux`
 
 ```
 
@@ -52,7 +53,7 @@ Install all project dependencies by running the command below
 
 Run
 ``` 
-  `$ npm start or deploy the index.html from the build folder 
+  `$ npm start or deploy the index.html from the build/public folder 
 ```
 
 ### Deployment
