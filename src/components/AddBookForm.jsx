@@ -5,7 +5,7 @@ import uniqid from 'uniqid';
 import { doAddBook } from '../redux/books/books';
 
 const AddBookForm = () => {
-  const [ book, setBook ] = useState({ title: '', author: '', id: '' });
+  const [ book, setBook ] = useState({ title: '', author: '', id: uniqid(), });
   const { title, author } = book;
   const dispatch = useDispatch();
 
@@ -19,7 +19,7 @@ const AddBookForm = () => {
   const addBookSubmit = (e) => {
     e.preventDefault()
     if(book.title !== '' && book.author !== '') {
-      dispatch(doAddBook(book))
+      dispatch(doAddBook(book));
     }
   }
 

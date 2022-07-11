@@ -11,7 +11,14 @@ const Books = () => {
   return (
     <div>
       <ul>
-        {books.map((book) => <Book title={ book.title } key={book.id} author={ book.author } />)}
+        {books.map((book) => (
+          <Book
+            title={ book.title }
+            key={book.id}
+            author={ book.author }
+            id={book.id}
+          />
+          ))}
       </ul>
       <AddBookForm />
     </div>
