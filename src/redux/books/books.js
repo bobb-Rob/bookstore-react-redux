@@ -7,7 +7,18 @@ export const doAddBook = (book) => ({ type: BOOK_ADDED, payload: book });
 export const doRemoveBook = (id) => ({ type: BOOK_REMOVED, id });
 
 // Reducer
-const initialState = [];
+const initialState = [
+  {
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    id: '1',
+  },
+  {
+    title: 'Rich Dad Poor Dad',
+    author: 'Robert Kiyosaki',
+    id: '2',
+  },
+];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case BOOK_ADDED:
