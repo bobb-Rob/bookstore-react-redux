@@ -64,7 +64,7 @@ Run
 
 | 👤 Name | Github | Twitter | LinkedIn |
 |------|--------|---------|----------|
-|Robertson Akpan|[@bobb-rob](https://github.com/bobb-rob)|[@___Robertson](https://twitter.com/___Robertson)|[@RobertsonAkpan](https://www.linkedin.com/in/robertson-akpan-6895a0123/)|
+|Robertson Akpan|[@bobb-rob](https://github.com/bobb-rob)|[@___Robertson](https://twitter.com/___Robertson)|[@RobertsonAkpan](https://www.linkedin.com/in/robertsonakpan/)|
 
 
 ## 🤝 Contributing
