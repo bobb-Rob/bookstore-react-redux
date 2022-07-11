@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBookForm from './AddBookForm';
 
