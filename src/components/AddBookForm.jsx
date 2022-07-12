@@ -21,8 +21,6 @@ const AddBookForm = () => {
       dispatch(doAddBook(book));
     }
   };
-
-  console.log(book);
   return (
     <form
       onSubmit={addBookSubmit}
