@@ -18,6 +18,12 @@ const initialState = [
     author: 'Robert Kiyosaki',
     id: '2',
   },
+  {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    id: '3',
+  },
+
 ];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
