@@ -1,11 +1,10 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
 import { doAddBook } from '../redux/books/books';
 
 const AddBookForm = () => {
-  const [ book, setBook ] = useState({ title: '', author: '', id: uniqid(), });
+  const [book, setBook] = useState({ title: '', author: '', id: uniqid() });
   const { title, author } = book;
   const dispatch = useDispatch();
 
@@ -13,20 +12,20 @@ const AddBookForm = () => {
     setBook((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
-    }))
-  }
-  
+    }));
+  };
+
   const addBookSubmit = (e) => {
-    e.preventDefault()
-    if(book.title !== '' && book.author !== '') {
+    e.preventDefault();
+    if (book.title !== '' && book.author !== '') {
       dispatch(doAddBook(book));
     }
-  }
+  };
 
-  console.log(book)
+  console.log(book);
   return (
     <form
-      onSubmit={ addBookSubmit }
+      onSubmit={addBookSubmit}
     >
       <h3>ADD NEW BOOK</h3>
       <input
@@ -34,14 +33,14 @@ const AddBookForm = () => {
         placeholder="Book Title"
         value={title}
         name="title"
-        onChange={ handleChange }
+        onChange={handleChange}
       />
       <input
         type="text"
         placeholder="Author"
         value={author}
         name="author"
-        onChange={ handleChange }
+        onChange={handleChange}
       />
       <input
         type="submit"
