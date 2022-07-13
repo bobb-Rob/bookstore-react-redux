@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const reOrganizeData = (Data) => {
@@ -15,31 +16,29 @@ const reOrganizeData = (Data) => {
 // Actions
 const BOOK_ADDED = 'BOOK_ADDED';
 const BOOK_REMOVED = 'BOOK_REMOVED';
-const BOOK_FETCHED = 'BOOK_FETCHED';
+const BOOKS = 'BOOKS/requestStatus';
 export const url = (id = '') => `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Qf3rTrhGNg4ve0WH5XO8/books/${id}`
 
 // Action creators
 export const doAddBook = (book) => ({ type: BOOK_ADDED, payload: book });
 export const doRemoveBook = (id) => ({ type: BOOK_REMOVED, id });
-export const doBookFetch = (books) => ({type: BOOK_FETCHED, payload: books })
 
-export const fetchBookList = () => {
-  return (dispatch) => {
-    axios.get(url()).then((list) => {     
-      const data = reOrganizeData(list.data)      
-      dispatch(doBookFetch(data))
-      return list;
-    })
+export const fetchBookList = createAsyncThunk(
+  BOOKS, 
+  async () => {
+    const response = await axios.get(url());    
+    const bookList = await response.data;   
+    const bookArray = reOrganizeData(bookList)   
+    return bookArray; 
   }
-}
+)
 
 // Reducer
 const initialState = [];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case BOOK_FETCHED:
-      console.log(action.payload)
-      return action.payload;
+    case 'BOOKS/requestStatus/fulfilled':      
+      return action.payload;    
     case BOOK_ADDED:
       return [...state, action.payload];
     case BOOK_REMOVED:
