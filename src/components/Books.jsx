@@ -7,12 +7,12 @@ import AddBookForm from './AddBookForm';
 
 const Books = () => {
   const books = useSelector((state) => state.books); 
-  const dispatch = useDispatch();
-
+  const dispatch = useDispatch(); 
   useEffect(() => {
-    dispatch(fetchBookList()).then(data => console.log(data));
+    dispatch(fetchBookList());
   },[]);
 
+  console.log(books)
   return (
     <div>
       <ul>

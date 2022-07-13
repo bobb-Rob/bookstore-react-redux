@@ -12,7 +12,9 @@ const Book = ({ title, author, id }) => {
       <div>
         <button
           type="button"
-          onClick={() => dispatch(doRemoveBook(id))}
+          onClick={() => {
+            dispatch(doRemoveBook(id));
+          }}
         >
           Remove
         </button>

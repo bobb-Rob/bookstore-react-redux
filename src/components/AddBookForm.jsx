@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
@@ -8,8 +7,8 @@ const AddBookForm = () => {
   const [book, setBook] = useState({
     title: '',
     author: '',
-    item_id: uniqid(), 
-    category: 'Fiction'
+    item_id: uniqid(),
+    category: 'Fiction',
   });
   const { title, author } = book;
   const dispatch = useDispatch();
@@ -27,6 +26,7 @@ const AddBookForm = () => {
       dispatch(doAddBook(book));
     }
   };
+
   return (
     <form
       onSubmit={addBookSubmit}
