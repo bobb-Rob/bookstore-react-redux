@@ -1,16 +1,16 @@
-/* eslint-disable no-restricted-syntax */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const reOrganizeData = (Data) => {
-  let obj = [];
-  for (const [key, value] of Object.entries(Data)) {
-    const target = value[0];
-    const source = { item_id: key };
-    const newBoj = Object.assign(target, source);
-    obj = obj.concat([newBoj]);
-  }
-  return obj;
+const transform = (data) => {
+  const arr = Object.entries(data);
+  let result = [];
+  arr.forEach((item) => {
+    const itemId = item[0];
+    const book = item[1][0];
+    book.item_id = itemId;
+    result = [...result, book];
+  });
+  return result;
 };
 
 // Actions
@@ -43,7 +43,7 @@ export const fetchBookList = createAsyncThunk(
   async () => {
     const response = await axios.get(url());
     const bookList = await response.data;
-    const bookArray = reOrganizeData(bookList);
+    const bookArray = transform(bookList);
     return bookArray;
   },
 );
