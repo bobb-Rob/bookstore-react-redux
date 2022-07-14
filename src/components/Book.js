@@ -6,10 +6,11 @@ import { doRemoveBook } from '../redux/books/books';
 const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
   return (
-    <li>
+    <li className="book-card">
       <h3>{title}</h3>
       <p>{author}</p>
-      <div>
+      <div className="book-buttons-wrap">
+        <button type="button">Comments</button>
         <button
           type="button"
           onClick={() => {
@@ -18,6 +19,7 @@ const Book = ({ title, author, id }) => {
         >
           Remove
         </button>
+        <button type="button">Edit</button>
       </div>
     </li>
   );

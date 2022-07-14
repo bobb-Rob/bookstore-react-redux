@@ -49,7 +49,14 @@ export const fetchBookList = createAsyncThunk(
 );
 
 // Reducer
-const initialState = [];
+const initialState = [
+  {
+    title: 'Awake to live',
+    category: 'Fiction',
+    author: 'Rev Gigson Heker',
+    item_id: 'l5kzlf20',
+  },
+];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'BOOKS/requestStatus/fulfilled':
