@@ -4,7 +4,12 @@ import uniqid from 'uniqid';
 import { doAddBook } from '../redux/books/books';
 
 const AddBookForm = () => {
-  const [book, setBook] = useState({ title: '', author: '', id: uniqid() });
+  const [book, setBook] = useState({
+    title: '',
+    author: '',
+    item_id: uniqid(),
+    category: 'Fiction',
+  });
   const { title, author } = book;
   const dispatch = useDispatch();
 
@@ -17,10 +22,11 @@ const AddBookForm = () => {
 
   const addBookSubmit = (e) => {
     e.preventDefault();
-    if (book.title !== '' && book.author !== '') {
+    if (title !== '' && author !== '') {
       dispatch(doAddBook(book));
     }
   };
+
   return (
     <form
       onSubmit={addBookSubmit}

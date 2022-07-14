@@ -12,7 +12,9 @@ const Book = ({ title, author, id }) => {
       <div>
         <button
           type="button"
-          onClick={() => dispatch(doRemoveBook(id))}
+          onClick={() => {
+            dispatch(doRemoveBook(id));
+          }}
         >
           Remove
         </button>
@@ -24,7 +26,7 @@ const Book = ({ title, author, id }) => {
 Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;
