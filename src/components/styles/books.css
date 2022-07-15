@@ -12,12 +12,12 @@
   list-style: none;
   padding: 1.688rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.book-card span {
-  font-family: Montserrat;
+.book-name-wrapper span {
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -28,8 +28,19 @@
   opacity: 0.5;
 }
 
-.book-card h3 {
-  font-family: RobotoSlab;
+.book-name-wrapper > p {
+  font-family: RobotoSlab, serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--blueVar1);
+}
+
+.book-name-wrapper h3 {
+  font-family: RobotoSlab, serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -37,6 +48,7 @@
   line-height: normal;
   letter-spacing: -0.2px;
   color: var(--black);
+  margin: 0.5rem 0 0.2rem;
 }
 
 .book-buttons-wrap {
@@ -45,12 +57,12 @@
 
 .book-buttons-wrap button {
   margin-right: 1rem;
-  padding: 0 1rem 0 0;  
+  padding: 0 1rem 0 0;
   border: none;
   background-color: var(--white);
   border-right: 1px solid var(--borderLines);
   height: 1.5rem;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -58,4 +70,68 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--blueVar1);
+}
+
+.progress-bar-wrapper {
+  display: flex;
+}
+
+.progress-bar-wrapper > div:last-child {
+  margin-left: 1.313rem;
+}
+
+.progress-bar-wrapper > div:last-child > span {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.circular-progressbar {
+  width: 4.25rem;
+}
+
+.percentage-el {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black);
+}
+
+.chapter-info p:first-child,
+.chapter-info p:nth-child(2) {
+  opacity: 0.5;
+  font-family: RobotoSlab, serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter-info p:nth-child(2) {
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  opacity: 1;
+  margin: 0.5rem 0;
+}
+
+.chapter-info button {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--blue);
+  border: none;
+  margin: 0.5rem 0;
+  color: var(--white);
 }

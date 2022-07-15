@@ -44,6 +44,6 @@ nav {
   border-radius: 50%;
 }
 
-.user-icon>svg {
+.user-icon > svg {
   color: var(--blue);
 }
