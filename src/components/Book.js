@@ -29,25 +29,27 @@ const Book = ({
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="progress-bar-wrapper">
-        <div className="circular-progressbar">
-          <CircularProgressbar
-            className="progresBar"
-            value={percentage}
-          />
+      <div className="book-progress-section">
+        <div className="progress-bar-wrapper">
+          <div className="circular-progressbar">
+            <CircularProgressbar
+              className="progresBar"
+              value={percentage}
+            />
+          </div>
+          <div>
+            <p className="percentage-el">
+              {percentage}
+              %
+            </p>
+            <span>Completed</span>
+          </div>
         </div>
-        <div>
-          <p className="percentage-el">
-            {percentage}
-            %
-          </p>
-          <span>Completed</span>
+        <div className="chapter-info">
+          <p>Current Chapter</p>
+          <p>Chapter 17</p>
+          <button type="button">UPDATE PROGRESS</button>
         </div>
-      </div>
-      <div className="chapter-info">
-        <p>Current Chapter</p>
-        <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>
   );

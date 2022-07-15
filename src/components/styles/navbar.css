@@ -6,6 +6,7 @@ nav {
   margin: 0 0 2.375rem;
   padding: 0 6.188rem 0 6.25rem;
   background-color: #fff;
+  box-shadow: 1px 1px 6px -2px rgb(116, 117, 118);
 }
 
 .logo {

@@ -51,6 +51,13 @@
   margin: 0.5rem 0 0.2rem;
 }
 
+.book-progress-section {
+  display: flex; 
+  width: 70%;
+  justify-content: space-around;
+  column-gap: 2rem;
+}
+
 .book-buttons-wrap {
   margin-top: 1rem;
 }
@@ -71,6 +78,10 @@
   letter-spacing: normal;
   color: var(--blueVar1);
 }
+
+/* .chapter-info {
+  
+} */
 
 .chapter-info button {
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;

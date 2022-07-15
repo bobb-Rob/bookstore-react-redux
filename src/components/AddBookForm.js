@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
 import { doAddBook } from '../redux/books/books';
+import './styles/addBook.css';
 
 const AddBookForm = () => {
   const [book, setBook] = useState({
@@ -30,9 +31,11 @@ const AddBookForm = () => {
   return (
     <form
       onSubmit={addBookSubmit}
+      className="add-book-form"
     >
       <h3>ADD NEW BOOK</h3>
       <input
+        id="title"
         type="text"
         placeholder="Book Title"
         value={title}
@@ -40,6 +43,7 @@ const AddBookForm = () => {
         onChange={handleChange}
       />
       <input
+        id="author"
         type="text"
         placeholder="Author"
         value={author}
@@ -49,6 +53,7 @@ const AddBookForm = () => {
       <input
         type="submit"
         value="ADD BOOK"
+        className="submit-btn"
       />
     </form>
   );
