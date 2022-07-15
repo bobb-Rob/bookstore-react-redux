@@ -1,6 +1,5 @@
-/* eslint-disable */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import axios from 'axios';// eslint-disable-next-line
 import { beginTheBar } from '../../services/loadingBarService';
 
 const transform = (data) => {
@@ -75,12 +74,12 @@ const booksReducer = (state = initialState, action) => {
 export const loadingReducer = (state = false, action) => {
   switch (action.type) {
     case isLOADING:
-     return true;
-    case stopLOADING: 
-     return false;
+      return true;
+    case stopLOADING:
+      return false;
     default:
-     return state;
+      return state;
   }
-}
+};
 
 export default booksReducer;

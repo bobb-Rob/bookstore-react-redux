@@ -12,7 +12,6 @@ const initialState = {
 export default function loadingBar(state = initialState, action) {
   switch (action.type) {
     case SET_PROGRESS:
-      // state.progress = action.payload;
       return { ...state, progress: action.payload };
 
     default:
