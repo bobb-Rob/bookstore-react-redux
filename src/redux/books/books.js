@@ -1,5 +1,7 @@
+/* eslint-disable */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { beginTheBar } from '../../services/loadingBarService';
 
 const transform = (data) => {
   const arr = Object.entries(data);
@@ -17,6 +19,10 @@ const transform = (data) => {
 const BOOK_ADDED = 'ADD_BOOK/requestStatus';
 const BOOK_REMOVED = 'REMOVED_BOOK/requestStatus';
 const BOOKS = 'BOOKS/requestStatus';
+const isLOADING = 'BOOKS/LOADING';
+const stopLOADING = 'BOOKS/STOPLOADING';
+export const LOADING = () => ({ type: isLOADING });
+export const STOPLOADING = () => ({ type: stopLOADING });
 export const url = (id = '') => `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Qf3rTrhGNg4ve0WH5XO8/books/${id}`;
 
 // Action creators
@@ -41,6 +47,7 @@ export const doRemoveBook = createAsyncThunk(
 export const fetchBookList = createAsyncThunk(
   BOOKS,
   async () => {
+    beginTheBar();
     const response = await axios.get(url());
     const bookList = await response.data;
     const bookArray = transform(bookList);
@@ -62,5 +69,16 @@ const booksReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export const loadingReducer = (state = false, action) => {
+  switch (action.type) {
+    case isLOADING:
+     return true;
+    case stopLOADING: 
+     return false;
+    default:
+     return state;
+  }
+}
 
 export default booksReducer;
