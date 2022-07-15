@@ -52,7 +52,7 @@
 }
 
 .book-progress-section {
-  display: flex; 
+  display: flex;
   width: 70%;
   justify-content: space-around;
   column-gap: 2rem;
@@ -80,7 +80,7 @@
 }
 
 /* .chapter-info {
-  
+
 } */
 
 .chapter-info button {

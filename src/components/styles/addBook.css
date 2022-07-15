@@ -3,7 +3,7 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 35px 40px;
   height: 10.75rem;
-  padding: 1.813rem 6.25rem;  
+  padding: 1.813rem 6.25rem;
 }
 
 .add-book-form > h3 {
