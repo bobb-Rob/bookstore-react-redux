@@ -1,0 +1,54 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.938rem;
+  margin: 0 0 2.375rem;
+  padding: 0 6.188rem 0 6.25rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 6px -2px rgb(116, 117, 118);
+}
+
+.logo {
+  margin: 0 2.938rem 0 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  text-decoration: none;
+}
+
+.nav-links {
+  margin-right: 2.563rem;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black);
+}
+
+.nav-links:focus {
+  color: var(--black);
+}
+
+.user-icon {
+  width: 2.813rem;
+  height: 2.813rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--borderLines);
+  border-radius: 50%;
+}
+
+.user-icon > svg {
+  color: var(--blue);
+}

@@ -11,7 +11,13 @@ const Category = () => {
       <h2>
         {typeof categories === 'string' ? categories : ''}
       </h2>
-      <button type="button" onClick={() => dispatch(doCheckStatus())}>Check Status</button>
+      <button
+        type="button"
+        onClick={() => dispatch(doCheckStatus())}
+        className="btn"
+      >
+        Check Status
+      </button>
     </div>
   );
 };

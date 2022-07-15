@@ -1,0 +1,56 @@
+.add-book-form {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 35px 40px;
+  height: 10.75rem;
+  padding: 1.813rem 6.25rem;
+}
+
+.add-book-form > h3 {
+  grid-column: span 6;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warmGrey);
+}
+
+#title {
+  grid-column: span 3;
+}
+
+#author {
+  grid-column: span 2;
+}
+
+#title,
+#author {
+  border: 1px solid var(--borderLines);
+  padding: 0.813rem 0.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--black);
+  margin-right: 2rem;
+}
+
+.btn {
+  width: 11rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 3px;
+  padding: 0.801rem 1.188rem;
+  color: var(--white);
+}
+
+.btn:hover {
+  opacity: 0.7;
+}

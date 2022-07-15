@@ -48,7 +48,7 @@ export const fetchBookList = createAsyncThunk(
   },
 );
 
-// Reducer
+// Reducers
 const initialState = [];
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
