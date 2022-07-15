@@ -25,7 +25,6 @@ const AddBookForm = () => {
     e.preventDefault();
     if (title !== '' && author !== '') {
       dispatch(doAddBook(book)).then((data) => {
-        console.log(data);
         if (data.type === 'ADD_BOOK/requestStatus/fulfilled') {
           setBook({
             title: '',
