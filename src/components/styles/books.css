@@ -72,6 +72,19 @@
   color: var(--blueVar1);
 }
 
+.chapter-info button {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--blue);
+  border: none;
+  margin: 0.5rem 0;
+  color: var(--white);
+}
+
+.book-buttons-wrap button:last-child {
+  border: none;
+}
+
 .progress-bar-wrapper {
   display: flex;
 }
@@ -125,13 +138,4 @@
   letter-spacing: 0.4px;
   opacity: 1;
   margin: 0.5rem 0;
-}
-
-.chapter-info button {
-  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
-  border-radius: 3px;
-  background-color: var(--blue);
-  border: none;
-  margin: 0.5rem 0;
-  color: var(--white);
 }

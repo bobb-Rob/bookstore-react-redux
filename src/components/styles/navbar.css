@@ -10,7 +10,7 @@ nav {
 
 .logo {
   margin: 0 2.938rem 0 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -24,7 +24,7 @@ nav {
 .nav-links {
   margin-right: 2.563rem;
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
