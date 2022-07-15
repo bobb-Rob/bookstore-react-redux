@@ -29,6 +29,7 @@ export const url = (id = '') => `https://us-central1-bookstore-api-e63c8.cloudfu
 export const doAddBook = createAsyncThunk(
   BOOK_ADDED,
   async (book) => {
+    beginTheBar();
     const response = await axios.post(url(), book);
     const data = await response.data;
     return { book, data };
@@ -38,6 +39,7 @@ export const doAddBook = createAsyncThunk(
 export const doRemoveBook = createAsyncThunk(
   BOOK_REMOVED,
   async (id) => {
+    beginTheBar();
     const response = await axios.delete(url(id), { item_id: id });
     const message = await response.data;
     return { id, message };

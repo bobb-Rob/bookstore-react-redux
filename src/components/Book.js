@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { doRemoveBook } from '../redux/books/books';
+import { endTheBar } from '../services/loadingBarService';
 import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({
@@ -21,7 +22,11 @@ const Book = ({
           <button
             type="button"
             onClick={() => {
-              dispatch(doRemoveBook(id));
+              dispatch(doRemoveBook(id)).then((data) => {
+                if (data.type === 'REMOVED_BOOK/requestStatus/fulfilled') {
+                  endTheBar();
+                }
+              });
             }}
           >
             Remove
