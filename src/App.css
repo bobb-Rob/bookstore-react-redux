@@ -14,3 +14,7 @@
   --black: #121212;
   --borderLines: #e8e8e8;
 }
+
+button {
+  cursor: pointer;
+}

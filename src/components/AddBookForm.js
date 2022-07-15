@@ -24,7 +24,17 @@ const AddBookForm = () => {
   const addBookSubmit = (e) => {
     e.preventDefault();
     if (title !== '' && author !== '') {
-      dispatch(doAddBook(book));
+      dispatch(doAddBook(book)).then((data) => {
+        console.log(data);
+        if (data.type === 'ADD_BOOK/requestStatus/fulfilled') {
+          setBook({
+            title: '',
+            author: '',
+            item_id: uniqid(),
+            category: 'Fiction',
+          });
+        }
+      });
     }
   };
 
@@ -53,7 +63,7 @@ const AddBookForm = () => {
       <input
         type="submit"
         value="ADD BOOK"
-        className="submit-btn"
+        className="btn"
       />
     </form>
   );

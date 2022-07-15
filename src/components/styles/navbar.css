@@ -35,6 +35,10 @@ nav {
   color: var(--black);
 }
 
+.nav-links:focus {
+  color: var(--black);
+}
+
 .user-icon {
   width: 2.813rem;
   height: 2.813rem;
