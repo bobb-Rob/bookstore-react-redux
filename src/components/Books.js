@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookList } from '../redux/books/books';
+import { endTheBar } from '../services/loadingBarService';
 import Book from './Book';
 import AddBookForm from './AddBookForm';
 import './styles/books.css';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
-
+  const { books } = useSelector((state) => state);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchBookList());
+    dispatch(fetchBookList()).then((data) => {
+      if (data.type === 'BOOKS/requestStatus/fulfilled') {
+        endTheBar(dispatch);
+      }
+    });
   }, []);
 
   return (

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
 import { doAddBook } from '../redux/books/books';
+import { endTheBar } from '../services/loadingBarService';
 import './styles/addBook.css';
 
 const AddBookForm = () => {
@@ -26,6 +27,7 @@ const AddBookForm = () => {
     if (title !== '' && author !== '') {
       dispatch(doAddBook(book)).then((data) => {
         if (data.type === 'ADD_BOOK/requestStatus/fulfilled') {
+          endTheBar(dispatch);
           setBook({
             title: '',
             author: '',

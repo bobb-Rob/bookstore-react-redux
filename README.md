@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live link 🙌
 
-[Demo link](#)
+[Demo link](https://bookstore-app-robertson.netlify.app/)
 
 To get a local copy up and running follow these simple example steps.
 
