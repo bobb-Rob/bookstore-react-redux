@@ -24,7 +24,7 @@ const Book = ({
             onClick={() => {
               dispatch(doRemoveBook(id)).then((data) => {
                 if (data.type === 'REMOVED_BOOK/requestStatus/fulfilled') {
-                  endTheBar();
+                  endTheBar(dispatch);
                 }
               });
             }}

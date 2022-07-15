@@ -13,7 +13,7 @@ const Books = () => {
   useEffect(() => {
     dispatch(fetchBookList()).then((data) => {
       if (data.type === 'BOOKS/requestStatus/fulfilled') {
-        endTheBar();
+        endTheBar(dispatch);
       }
     });
   }, []);
