@@ -9,6 +9,7 @@
 
 - React 🔥
 - CSS 😋
+- CRA
 
 ## Functionalites 😄
  
