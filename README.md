@@ -1,15 +1,15 @@
 # Bookstore CMS App - REACT.js
 
 ## Welcome! 👋
-> #### REACT app to manage your books
-> Bookstore CMS to display a list of books, categorize it, add and remove books and update your reading progress
+
+The Bookstore Content Management System (CMS) is a web-based application that enables users to maintain, track, and manage a comprehensive inventory of books. With its intuitive interface, users can easily organize books into multiple categories, add and remove books seamlessly, and monitor their reading progress. Additionally, the CMS provides advanced features that allow users to generate comprehensive reports and get insights into their reading habits, making it a powerful tool for book enthusiasts, students, and professionals alike.
 
                              
 ## Built With ✔️
 
 - React 🔥
+- Redux ToolKit
 - CSS 😋
-- CRA
 
 ## Functionalites 😄
  
